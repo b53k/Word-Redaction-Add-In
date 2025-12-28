@@ -2,6 +2,10 @@
 
 A Microsoft Word add-in that automatically detects and redacts sensitive information from documents, adds confidentiality headers, and enables change tracking for audit purposes.
 
+<center>
+<img src="assets/word.png" width="100" height="100"> &nbsp &nbsp &nbsp
+<img src="assets/demo.gif" width="400" height="300"> &nbsp &nbsp &nbsp<img src="assets/taskpaneUI.png" width="100" height="300"> </center>
+
 ## Features
 
 - **Automatic Sensitive Data Detection**: Identifies and redacts various types of sensitive information including:
@@ -13,7 +17,6 @@ A Microsoft Word add-in that automatically detects and redacts sensitive informa
   - Dates of birth
   - Addresses
   - Medical record numbers
-  - Order numbers
   - Other identifiers
 
 - **Confidentiality Header**: Automatically inserts a "CONFIDENTIAL DOCUMENT" header at the top of the document
@@ -49,7 +52,7 @@ A Microsoft Word add-in that automatically detects and redacts sensitive informa
    `npm start`
       This command will:
    - Generate SSL certificates for local development
-   - Start a local HTTPS server on port 3000
+   - Start a local HTTPS server on port 3000: `https://localhost:3000`
    - Compile TypeScript files
    - Attempt to automatically sideload the add-in to Word
 
@@ -58,7 +61,7 @@ A Microsoft Word add-in that automatically detects and redacts sensitive informa
    - Go to **Add-ins** > **Advanced** > **Upload My Add-in**
    - Select the `manifest.xml` file from the project root
 
-3. Once loaded, the add-in will appear in the **Home** tab. Click the **Show Taskpane** button to open the redaction interface.
+3. Once loaded, start local HTTPS server on port 3000: `https://localhost:3000`. Refresh word, then add-in will appear in the **Home** tab. Click the **Show Taskpane** button to open the redaction interface. <img src="assets/taskpane.png">
 
 ## Usage
 
@@ -68,17 +71,20 @@ A Microsoft Word add-in that automatically detects and redacts sensitive informa
 4. Click the **Redact** button to process the document
 5. View the redaction summary showing counts of each type of sensitive data found
 
+
 ## Project Structure
 
+```text
 ├── src/                    # TypeScript source files
-│   ├── redaction.ts       # Sensitive data detection logic
-│   ├── taskpane.ts        # UI and event handling
-│   ├── wordOperations.ts  # Word API operations
-│   └── types.ts           # TypeScript type definitions
-├── compiledJS/            # Compiled JavaScript output
-├── assets/                # Icons and images
-├── scripts/               # Utility scripts
-├── index.html             # Task pane HTML
-├── styles.css             # Custom styling
-├── manifest.xml           # Office Add-in manifest
-└── package.json           # Dependencies and scripts
+│   ├── redaction.ts        # Sensitive data detection logic
+│   ├── taskpane.ts         # UI and event handling
+│   ├── wordOperations.ts   # Word API operations
+│   └── types.ts            # TypeScript type definitions
+├── compiledJS/             # Compiled JavaScript output
+├── assets/                 # Icons, images and demo
+├── scripts/                # Utility scripts
+├── index.html              # Task pane HTML
+├── styles.css              # Custom styling
+├── manifest.xml            # Office Add-in manifest
+└── package.json            # Dependencies and scripts
+```
