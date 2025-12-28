@@ -1,10 +1,13 @@
-# Word Document Redaction Add-in
+# <img src="assets/word.png" width="35" height="35"> Word Document Redaction Add-in 
 
 A Microsoft Word add-in that automatically detects and redacts sensitive information from documents, adds confidentiality headers, and enables change tracking for audit purposes.
 
-<center>
-<img src="assets/word.png" width="100" height="100"> &nbsp &nbsp &nbsp
-<img src="assets/demo.gif" width="400" height="300"> &nbsp &nbsp &nbsp<img src="assets/taskpaneUI.png" width="100" height="300"> </center>
+<p align="center">
+  <img src="assets/demo.gif" height="400" /> &nbsp &nbsp
+  <img src="assets/taskpaneUI.png" height="400" />
+</p>
+
+
 
 ## Features
 
@@ -61,7 +64,7 @@ A Microsoft Word add-in that automatically detects and redacts sensitive informa
    - Go to **Add-ins** > **Advanced** > **Upload My Add-in**
    - Select the `manifest.xml` file from the project root
 
-3. Once loaded, start local HTTPS server on port 3000: `https://localhost:3000`. Refresh word, then add-in will appear in the **Home** tab. Click the **Show Taskpane** button to open the redaction interface. <img src="assets/taskpane.png">
+3. Once loaded, start local HTTPS server on port 3000: `https://localhost:3000`. Refresh word, then add-in will appear in the **Home** tab. Click the **Show Taskpane** button to open the redaction interface. <br> <img src="assets/taskpane.png">
 
 ## Usage
 
